@@ -1,2 +1,3 @@
-print('文字1')
-print('文字2')
+x = 10
+y = 20
+print(x + y)
