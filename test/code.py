@@ -1,5 +1,2 @@
-x = {'リンゴ': 120, 'バナナ': 300, 'イチゴ': 450}
-y = {'トマト': 280, 'ナシ': 150}
-z = x | y
-z_len = len(z)
-print(z_len)
+for x in range(10):
+    print(x)
