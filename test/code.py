@@ -1,6 +1,2 @@
-n = 0
-for x in range(1, 100, 1):
-    # print(x)
-    n += x
-
+n = (3 + 6 * (1 + 1 * 2)) ** 2
 print(n)
