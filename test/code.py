@@ -1,2 +1,3 @@
-n = (3 + 6 * (1 + 1 * 2)) ** 2
-print(n)
+age = 19
+result = (not (age >= 20))
+print(result)
