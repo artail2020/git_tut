@@ -2,7 +2,7 @@ import mysql.connector
 
 cnx = mysql.connector.connect(
     user='root',
-    password='legedawn0133',
+    password='',
     host='localhost',
     port='13306'
 )
