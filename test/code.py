@@ -1,5 +1,5 @@
-import numpy as np
+x_list: list[str] = ["apple", "orange", "banana"]
+s: str = "\n".join(x_list)
 
-x = np.array([1, 2, 3])
-y = np.array([10, 11, 12])
-print(x + y)
+with open("./foo3.txt", "w", encoding="utf-8") as f:
+    f.write(s)
