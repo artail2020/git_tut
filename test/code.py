@@ -1,5 +1,5 @@
-x_list: list[str] = ["apple", "orange", "banana"]
-s: str = "\n".join(x_list)
+x_dict: dict[str, int] = {"a": 100, "b": 200, "c": 300}
 
-with open("./foo3.txt", "w", encoding="utf-8") as f:
-    f.write(s)
+for (x, y) in x_dict.items():
+    print(x)
+    print(y)
