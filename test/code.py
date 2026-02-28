@@ -1,5 +1,3 @@
-x_dict: dict[str, int] = {"a": 100, "b": 200, "c": 300}
-
-for (x, y) in x_dict.items():
-    print(x)
-    print(y)
+age: float = 0.5
+result: str = "成人" if age >= 20 else "子供" if age >= 1 else "赤ちゃん"
+print(result)
