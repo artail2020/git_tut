@@ -1,6 +1,4 @@
-def total_price_1item(unit_price: int, quantity: int = 1) -> str:
-    total_price: int = unit_price * quantity
-    return f'\\{total_price:,}'
+names: list[str] = ["鈴木", "斉藤", "大川"]
 
-total: str = total_price_1item(unit_price=1300)
-print(total)
+for i, n in enumerate(names, start=1):
+    print(f"{i}位: {n}")
