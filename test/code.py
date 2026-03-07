@@ -1,4 +1,3 @@
-names: list[str] = ["鈴木", "斉藤", "大川"]
-
-for i, n in enumerate(names, start=1):
-    print(f"{i}位: {n}")
+num: list[int] = [5, 8, 10, 12, 30]
+result: list[int] = list(filter(lambda x: x >= 10, num))
+print(result)
