@@ -21,6 +21,16 @@ logger.addHandler(err_handler)
 
 # ログ出力
 logger.info("プログラムが開始されました")
-logger.debug("入力値は1000です")
-logger.warning("ファイルの容量が200GBを超えました")
-logger.error("ファイルが存在していません")
+
+# テスト関数を定義
+def func(t: list[int]) -> list[int]:
+    logger.debug(f"func関数が呼び出されました。引数t: {t}")
+    t.append(999)
+    logger.debug(f"func関数の結果: {t}")
+    return t
+
+x: list[int] = [1, 2, 3]
+y: list[int] = func(x)
+
+print(f"{x} {y}")
+logger.info("プログラムが終了しました")
