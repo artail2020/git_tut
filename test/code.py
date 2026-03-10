@@ -1,4 +1,6 @@
 from logging import getLogger, FileHandler, DEBUG, ERROR, Formatter
+from datetime import date
+import jpholiday
 
 # formatter,logger設定
 formatter = Formatter("[%(levelname)s] %(asctime)s - %(message)s (%(filename)s)")
@@ -22,15 +24,7 @@ logger.addHandler(err_handler)
 # ログ出力
 logger.info("プログラムが開始されました")
 
-# テスト関数を定義
-def func(t: list[int]) -> list[int]:
-    logger.debug(f"func関数が呼び出されました。引数t: {t}")
-    t.append(999)
-    logger.debug(f"func関数の結果: {t}")
-    return t
-
-x: list[int] = [1, 2, 3]
-y: list[int] = func(x)
-
-print(f"{x} {y}")
-logger.info("プログラムが終了しました")
+# 2021年の祝日を確認
+result: list[tuple[date, str]] = jpholiday.year_holidays(2021)
+logger.debug(f"取得した祝日は{result} です")
+print(f"取得した祝日は {result} です")
