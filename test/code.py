@@ -24,7 +24,12 @@ logger.addHandler(err_handler)
 # ログ出力
 logger.info("プログラムが開始されました")
 
-# 2021年の祝日を確認
-result: list[tuple[date, str]] = jpholiday.year_holidays(2021)
-logger.debug(f"取得した祝日は{result} です")
-print(f"取得した祝日は {result} です")
+# 可変長引数の関数を定義
+def func(x: int, **kwargs) -> None:
+    logger.debug(f"引数{x}: {kwargs}で関数を実行")
+    print(f"{x}")
+    for k, v in kwargs.items():
+        print(f"{k}: {v}")
+
+func(1, name="斉藤", user_id=222)
+func(2, item="牛乳", item_id=111, price=100)
