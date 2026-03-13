@@ -1,6 +1,4 @@
 from logging import getLogger, FileHandler, DEBUG, ERROR, Formatter
-from datetime import date
-import jpholiday
 
 # formatter,logger設定
 formatter = Formatter("[%(levelname)s] %(asctime)s - %(message)s (%(filename)s)")
